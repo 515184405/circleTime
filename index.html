@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="time/jquery.tzineClock.css"/>
+</head>
+<body>
+<div class="fancyClock" data-time="2018-06-01 14:59:00" data-type="time" id="fancyClock1"></div>
+<div class="fancyClock" data-time="2019-09-24 12:12:12" data-type="dayTime" id="fancyClock"></div>
+<div class="fancyClock" data-time="2019-05-24 15:15:15" data-type="dayTime" id="fancyClock2"></div>
+<script src="jquery.min.js"></script>
+<script src="time/jquery.tzineClock.js"></script>
+<script type="text/javascript">
+	$('#fancyClock').tzineClock({
+        // 圆的类名并且是当前圆圈的颜色图
+        colors : ['circle1','circle2','circle3','circle4'],
+        //圆内显示的文本
+        words : ['Days','Hours','Minutes','Seconds'],
+    });
+    $('#fancyClock1').tzineClock({
+        colors : ['circle2','circle3','circle4'],
+        words : ['小时','分钟','秒'],
+    });
+    //默认样式
+    $('#fancyClock2').tzineClock();
+</script>
+</body>
+</html>

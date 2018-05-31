@@ -1,0 +1,98 @@
+.fancyClock{
+	width:450px;
+	margin:20px auto;
+	height: 100px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clock{
+	/* The .clock div. Created dynamically by jQuery */
+	background-color:#fff;
+	height:100px;
+	width:100px;
+	position:relative;
+	overflow:hidden;
+	float:left;
+	margin-left:15px;
+}
+.clock:first-child{
+	margin-left:0;
+}
+
+.clock .rotate{
+	/* There are two .rotate divs - one for each half of the background */
+	position:absolute;
+	width:100px;
+	height:100px;
+	top:0;
+	left:0;
+	-webkit-transition: all 0.9s linear;
+	-moz-transition: all 0.9s linear;
+	-ms-transition: all 0.9s linear;
+	-o-transition: all 0.9s linear;
+	transition: all 0.9s linear;
+}
+
+.rotate.right{
+	display:none;
+	z-index:11;
+}
+
+.clock .bg, .clock .front{
+	width:50px;
+	height:100px;
+	background-color:#fff;
+	position:absolute;
+	top:0;
+}
+
+.clock .display{
+	/* Holds the number of seconds, minutes or hours respectfully */
+	position:absolute;
+	width:100px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	z-index:20;
+	color:#364455;
+	font-size:24px;
+	text-align:center;
+	top:30px;
+	left:0;
+	
+	/* CSS3 text shadow: */
+}
+.clock .date-word{
+	position:absolute;
+	width:100px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	z-index:20;
+	color:#364455;
+	font-size:12px;
+	text-align:center;
+	top:60px;
+	left:0;
+}
+
+/* The left part of the background: */
+
+.clock .bg.left{ left:0; }
+
+/* Individual styles for each color: */
+.circle1 .bg.left{ background:url(img/circle1.png) no-repeat left top; }
+.circle2 .bg.left{ background:url(img/circle2.png) no-repeat left top; }
+.circle3 .bg.left{	background:url(img/circle3.png) no-repeat left top; }
+.circle4 .bg.left{	background:url(img/circle4.png) no-repeat left top; }
+
+/* The right part of the background: */
+.clock .bg.right{ left:50px; }
+
+.circle1 .bg.right{ background:url(img/circle1.png) no-repeat right top; }
+.circle2 .bg.right{ background:url(img/circle2.png) no-repeat right top; }
+.circle3 .bg.right{ background:url(img/circle3.png) no-repeat right top; }
+.circle4 .bg.right{ background:url(img/circle4.png) no-repeat right top; }
+
+
+.clock .front.left{
+	left:0;
+	z-index:10;
+}
